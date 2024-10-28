@@ -44,27 +44,4 @@ export default class Character {
         this.health -= points * (1 - this.defence / 100);
     }
 
-    orderByProps(props =[]) {
-        const sortedProps = [];
-
-        for(const prop of props){
-            if (this.hasOwnProperty(prop)) {
-                sortedProps.push({key: prop, value: this[prop]});
-            }
-            else {
-                throw new Error ("У персонажа нет такого свойства!")
-            }
-        }
-
-        const remainingProps = Object.keys(this)
-            .filter(key => !props.includes(key))
-            .sort((a,b) => a.localeCompare(b));
-
-        for (const key of remainingProps) {
-            sortedProps.push({key:key, value: this[key]});
-        }
-        console.log(sortedProps)
-        return(sortedProps)
-    }
-
 };
