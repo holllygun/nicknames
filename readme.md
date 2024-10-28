@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/t997r67a6qtt1jia?svg=true)](https://ci.appveyor.com/project/holllygun/nicknames)
